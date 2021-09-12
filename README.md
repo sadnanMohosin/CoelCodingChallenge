@@ -21,6 +21,8 @@ distinct_activity_count
 ````
 
 `This code allows us to group activities according to count of activity and sort them to descending order `
+
+
 ![](F:\work in jupyter\coel_coding_challenge\1.png)
 
 
