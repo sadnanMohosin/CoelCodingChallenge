@@ -58,6 +58,19 @@ print('Average time to complete a deal is around ',round(target_activity.deal_en
 
 > Average time to complete a deal is around  40.0 days. Which is almost over a month and this performance should be improved
 
+### Visualization
+![4](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/4.PNG)
+
+
+> From the bar chart we can see that "m" was done 141826 times which is almost 34.68% more than activity "l"
+
+![5](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/5.PNG)
+
+
+> But from this graph we can see that though "m" activity was done more that 34% with the customers to close the deal but "l" activity has the highest success rate to close deals with customers which is almost 2.5%
+
+**To improve performance of the company "l" activity should be done more with customers as we can see it is working fine to close a deal in respect to other activities**
+
 
 
 
