@@ -33,7 +33,7 @@ distinct_activity_count
 target_activity=pd.merge(target,activity,on = 'customer',how = 'inner')
 target_activity.dtypes
 ```
-![](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/2.PNG)
+![2](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/2.PNG)
 
 
 `we can see that date_x and date_y is object but we need them as datetime to find the difference between activity starting  and end date.Also change the date_x and date_y column name to activity_start and activity_end respectively`
@@ -71,6 +71,29 @@ print('Average time to complete a deal is around ',round(target_activity.deal_en
 
 **To improve performance of the company "l" activity should be done more with customers as we can see it is working fine to close a deal in respect to other activities**
 
+## Prediction
+
+> Random Forest Algorithm overview
+
+Random forest is a flexible, easy to use machine learning algorithm that produces, even without hyper-parameter tuning, a great result most of the time. It is also one of the most used algorithms, because of its simplicity and diversity (it can be used for both classification and regression tasks).
+
+Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result.
+
+The random forest uses many trees, and it makes a prediction by averaging the predictions of each component tree. It generally has much better predictive accuracy than a single decision tree and it works well with default parameters. If I keep modeling, I can learn more models with even better performance, but many of those are sensitive to getting the right parameters.
+
+> Why I choose the algorithm?
+
+1. One big advantage of random forest is that it can be used for both classification and regression problems, which form the majority of current machine learning systems.
+2. Random forest adds additional randomness to the model, while growing the trees. Instead of searching for the most important feature while splitting a node, it searches for the best feature among a random subset of features. This results in a wide diversity that generally results in a better model.
+3. Another great quality of the random forest algorithm is that it is very easy to measure the relative importance of each feature on the prediction. 
+
+> Random Forest with given dataset
+
+with random forest this dataset will provide better prediction. As it searches for the best feature among a random subset of features,it will find the best feature to predict deal closing date.
+
+> What informations are missing in dateset
+
+For now there is only one variable available and that is activity_count. Only depending on activity count prediction model will not work well. We need other variables like benefits customers get,cost to complete a deal etc. If we get other variables then random forest will find the best feature to predict closing date.
 
 
 
