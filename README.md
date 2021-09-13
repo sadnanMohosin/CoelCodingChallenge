@@ -67,9 +67,30 @@ print('Average time to complete a deal is around ',round(target_activity.deal_en
 ![5](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/5.PNG)
 
 
-> But from this graph we can see that though "m" activity was done more that 34% with the customers to close the deal but "l" activity has the highest success rate to close deals with customers which is almost 2.5%
+> But from this graph we can see that though "m" activity was done more than 34% times with the customers to close the deal but "l" activity has the highest success rate to close deals with customers which is almost 2.5%
 
 **To improve performance of the company "l" activity should be done more with customers as we can see it is working fine to close a deal in respect to other activities**
+
+* Finally transfer the activity contribution data to csv file
+
+`Lets merge the activity and target dataframe with left join`
+
+```python
+result_all = pd.merge(activity,target,on='customer',how='left',indicator=True)
+result_all
+```
+
+![6](https://github.com/sadnanMohosin/CoelCodingChallenge/blob/main/images/6.PNG)
+
+> Here in the _merge column "left_only" represents those customers to whom activity has been made but deal not done yet. "both" represents those customers to whome deal has been done.
+
+`now create a column named 'contribution' and assign value 1 for 'both' and 0 for 'left_only'. Then transfer 'activity_type' and 'contribution' column data ta a csv file`
+
+```python
+result_all['contribution'] = np.where(result_all['_merge']=="left_only",0,1)
+result_all = result_all.loc[:,['activity_type','contribution']]
+result_all.to_csv('result.csv',index=False)
+```
 
 ## Prediction
 
