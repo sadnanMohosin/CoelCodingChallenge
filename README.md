@@ -115,6 +115,7 @@ with random forest this dataset will provide better prediction. As it searches f
 > What informations are missing in dateset
 
 For now there is only one variable available and that is activity_count. Only depending on activity count prediction model will not work well. We need other variables like benefits customers get,cost to complete a deal etc. If we get other variables then random forest will find the best feature to predict closing date.
+-assignment
 
 
 
